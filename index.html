@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- --------- FAVICON ---------- -->
+    <link rel="shortcut icon" href="assets/images/Capture d'écran (133).png" type="image/x-icon">
+
+    <title>Portfolio</title>
+</head>
+<body>
+   <div class="container">
+    <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Ide</p>
+            <span>.</span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list">
+                    <a href="#home" class="nav-link active-link" data-translate="home">Home</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#about" class="nav-link" data-translate="about">About</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#projects" class="nav-link" data-translate="projects">Projects</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#contact" class="nav-link" data-translate="contact">Contact</a>
+                    <div class="circle"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <small><a class="btn" href="CV professionnel gris simple (1).pdf" download="HamzaIdhmad.pdf" ><span data-translate="downloadCV">Download CV </span><i class="uil uil-file-alt"></i></a></small>
+        </div>
+        <div><button class="btn" id="languageBtn">DE</button></div>
+        <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+
+
+    <!-- -------------- MAIN ---------------- -->
+    <main class="wrapper">
+       <!-- -------------- FEATURED BOX ---------------- -->
+       <section class="featured-box" id="home">
+          <div class="featured-text">
+            <div class="featured-text-card">
+                <span>Hamza Idhmad</span>
+            </div>
+            <div class="featured-name">
+                <p><span data-translate="introduction">I'm </span><span class="typedText"></span></p>
+            </div>
+            <div class="featured-text-info">
+                <p data-translate="intro">Skilled full stack developer with a passion for creating seamless, scalable web applications from front to back.</p>
+            </div>
+            <div class="featured-text-btn">
+                <small><a class="btn" href="CV professionnel gris simple (1).pdf" download="HamzaIdhmad.pdf"><span  data-translate="downloadCV">Download CV </span><i class="uil uil-file-alt"></i></a></small>
+            </div>
+            <div class="social_icons">
+                <div class="icon"><a href="https://www.instagram.com/hamzaide6"><i class="uil uil-instagram"></i></a></div>
+                <div class="icon"><a href="https://www.linkedin.com/in/hamza-idhmad-a2b025337/"><i class="uil uil-linkedin-alt"></i></a></div>
+                <div class="icon"><a href="https://github.com/HAMZA-IDHMAD"><i class="uil uil-github-alt"></i></a></div>
+            </div>
+          </div>
+          <div class="featured-image">
+            <div class="image">
+                <img src="assets/images/edited_image_with_background-removebg-preview (2).png" alt="avatar">
+            </div>
+          </div>
+          <div class="scroll-icon-box">
+            <a href="#about" class="scroll-btn">
+                <i class="uil uil-mouse-alt"></i>
+                <p data-translate="scrollDown">Scroll Down</p>
+            </a>
+          </div>
+       </section>
+       <!-- -------------- ABOUT BOX ---------------- -->
+       <section class="section" id="about">
+          <div class="top-header">
+            <h1 data-translate="aboutMe">About Me</h1>
+          </div>
+          <div class="row">
+            <div class="col">
+                <div class="about-info">
+                    <h3 data-translate="myIntroduction">My introduction</h3>
+                    <p data-translate="aboutText">I am well-versed in HTML, CSS, PHP, Python and JavaScript, and other cutting edge frameworks and libraries, which allows me to implement interactive features. Additionally, I have experience working with content management systems (CMS) like WordPress.</p>
+                    <div class="about-btn">
+                        <button class="btn"><a style="color: white; text-decoration: none;"  href="CV professionnel gris simple (1).pdf" download="HamzaIdhmad.pdf" data-translate="downloadCV">Download CV <i class="uil uil-import"></i></a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Bootstrap</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                    </div>
+                </div>
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>PHP</span>
+                        <span>Laravel</span>
+                        <span>Python</span>
+                        <span>Django</span>
+                    </div>
+                </div>
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3>Database</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>MySQL</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+       </section>
+
+       <!-- -------------- PROJECT BOX ---------------- -->
+       <section class="section" id="projects">
+          <div class="top-header">
+              <h1 data-translate="projects">Projects</h1>
+          </div>
+                      
+          <div class="portfolio">
+              <!-- Card 1 -->
+              <div class="card">
+                  <img src="assets/images/Capture d’écran (115).png" alt="Project 1">
+                  <h3 data-translate="project1Title">Mobile App Design</h3>
+                  <div class="overlay">
+                      <p data-translate="project1Desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nam, atque nihil modi ad, sunt saepe dicta reiciendis blanditiis ea similique adipisci incidunt quidem expedita possimus nulla sapiente distinctio dolor.</p>
+                      <a href="" data-translate="viewProject">View Project</a>
+                  </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="card">
+                  <img src="assets/images/Capture d’écran (115).png" alt="Project 2">
+                  <h3 data-translate="project2Title">Website Development</h3>
+                  <div class="overlay">
+                      <p data-translate="project2Desc">Project description goes here.</p>
+                      <a href="" data-translate="viewProject">View Project <i class="fa-solid fa-earth-americas"></i></a>
+                  </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="card">
+                  <img src="assets/images/Capture d’écran (115).png" alt="Project 3">
+                  <h3 data-translate="project3Title">UX/UI Design</h3>
+                  <div class="overlay">
+                      <p data-translate="project3Desc">Project description goes here.</p>
+                      <a href="" data-translate="viewProject">View Project <i class="fa-solid fa-earth-americas"></i></a>
+                  </div>
+              </div>
+          </div>
+       </section>
+
+       <!-- -------------- CONTACT BOX ---------------- -->
+       <section class="section" id="contact">
+          <div class="top-header">
+            <h1 data-translate="getInTouch">Get in touch</h1>
+            <span data-translate="contactDesc">Do you have a project in your mind, contact me here</span>
+          </div>
+          <div class="row">
+             <div class="col">
+                <div class="contact-info">
+                    <h2 ><span data-translate="findMe">Find Me </span><i class="uil uil-corner-right-down"></i></h2>
+                    <p><i class="uil uil-envelope"></i> Email: idhmadhamza73@gmail.com</a></p>
+                    <p><i class="uil uil-phone"></i> Tel: +212 656 089 820</p>
+                </div>
+             </div>
+             <div class="col">
+                <form class="form-control" id="contactForm">
+                    <div class="form-inputs">
+                        <input type="text" class="input-field" id="name" placeholder="Name" data-translate="name">
+                        <input type="text" class="input-field" id="email" placeholder="Email">
+                    </div>
+                    <div class="text-area">
+                        <textarea placeholder="Message" id="message" data-translate="message"></textarea>
+                    </div>
+                    <div class="form-button">
+                        <button type="submit" class="btn" ><span data-translate="send">Send </span><i class="uil uil-message"></i></button>
+                    </div>
+                </form>
+             </div>
+          </div>
+       </section>
+    </main>
+
+    <!-- --------------- FOOTER --------------- -->
+    <footer>
+        <div class="top-footer">
+            <p>Hamza Idhmad .</p>
+        </div>
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer_menu_list">
+                    <a href="#home" data-translate="home">Home</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#about" data-translate="about">About</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#projects" data-translate="projects">Projects</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#contact" data-translate="contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-social-icons">
+            <div class="icon"><a href="https://www.instagram.com/hamzaide6"><i class="uil uil-instagram"></i></a></div>
+            <div class="icon"><a href="https://www.linkedin.com/in/hamza-idhmad-a2b025337/"><i class="uil uil-linkedin-alt"></i></a></div>
+            <div class="icon"><a href="https://github.com/HAMZA-IDHMAD"><i class="uil uil-github-alt"></i></a></div>
+        </div>
+    </footer>
+
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
+    
+
+    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+</html>
