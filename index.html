@@ -43,9 +43,7 @@
                 </li>
             </ul>
         </div>
-        <div class="nav-button">
-            <small><a class="btn" href="CV professionnel gris simple (1).pdf" download="HamzaIdhmad.pdf" ><span data-translate="downloadCV">Download CV </span><i class="uil uil-file-alt"></i></a></small>
-        </div>
+
         <div><button class="btn" id="languageBtn">DE</button></div>
         <div class="nav-menu-btn">
             <i class="uil uil-bars" onclick="myMenuFunction()"></i>
@@ -98,9 +96,7 @@
                 <div class="about-info">
                     <h3 data-translate="myIntroduction">My introduction</h3>
                     <p data-translate="aboutText">I am well-versed in HTML, CSS, PHP, Python and JavaScript, and other cutting edge frameworks and libraries, which allows me to implement interactive features. Additionally, I have experience working with content management systems (CMS) like WordPress.</p>
-                    <div class="about-btn">
-                        <button class="btn"><a style="color: white; text-decoration: none;"  href="CV professionnel gris simple (1).pdf" download="HamzaIdhmad.pdf" data-translate="downloadCV">Download CV <i class="uil uil-import"></i></a></button>
-                    </div>
+
                 </div>
             </div>
             <div class="col">
@@ -113,7 +109,6 @@
                         <span>CSS</span>
                         <span>Bootstrap</span>
                         <span>JavaScript</span>
-                        <span>React</span>
                     </div>
                 </div>
                 <div class="skills-box">
@@ -124,7 +119,6 @@
                         <span>PHP</span>
                         <span>Laravel</span>
                         <span>Python</span>
-                        <span>Django</span>
                     </div>
                 </div>
                 <div class="skills-box">
@@ -149,34 +143,56 @@
           <div class="portfolio">
               <!-- Card 1 -->
               <div class="card">
-                  <img src="assets/images/Capture d’écran (115).png" alt="Project 1">
-                  <h3 data-translate="project1Title">Mobile App Design</h3>
+                  <img src="assets/images/fastDelivery.jpeg" alt="FastDelivery Project">
+                  <h3 data-translate="project1Title">FastDelivery</h3>
                   <div class="overlay">
-                      <p data-translate="project1Desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nam, atque nihil modi ad, sunt saepe dicta reiciendis blanditiis ea similique adipisci incidunt quidem expedita possimus nulla sapiente distinctio dolor.</p>
-                      <a href="" data-translate="viewProject">View Project</a>
+                      <p data-translate="project1Desc">FastDelivery is a cloud-native microservices application that manages e-commerce deliveries. This system replaces a monolithic architecture with four independent microservices that communicate via REST APIs and share authentication via JWT tokens.</p>
+                      <a href="https://github.com/HAMZA-IDHMAD/fast-delivery-with-node-js-express-js-and-mongoDB" target="_blank" data-translate="viewProject">View Project</a>
                   </div>
               </div>
 
               <!-- Card 2 -->
               <div class="card">
-                  <img src="assets/images/Capture d’écran (115).png" alt="Project 2">
-                  <h3 data-translate="project2Title">Website Development</h3>
+                  <img src="assets/images/fitmas.png" alt="FITMAS Project">
+                  <h3 data-translate="project2Title">FITMAS Club</h3>
                   <div class="overlay">
-                      <p data-translate="project2Desc">Project description goes here.</p>
-                      <a href="" data-translate="viewProject">View Project <i class="fa-solid fa-earth-americas"></i></a>
+                      <p data-translate="project2Desc">FITMAS club app / club sportif management website</p>
+                      <a href="https://github.com/Redaaitlahsen/Gym" target="_blank" data-translate="viewProject">View Project</a>
                   </div>
               </div>
 
               <!-- Card 3 -->
               <div class="card">
-                  <img src="assets/images/Capture d’écran (115).png" alt="Project 3">
-                  <h3 data-translate="project3Title">UX/UI Design</h3>
+                  <img src="assets/images/srdt.png" alt="SRDT Project">
+                  <h3 data-translate="project3Title">SRDT Finance</h3>
                   <div class="overlay">
-                      <p data-translate="project3Desc">Project description goes here.</p>
-                      <a href="" data-translate="viewProject">View Project <i class="fa-solid fa-earth-americas"></i></a>
+                      <p data-translate="project3Desc">SRDT finance management website</p>
+                      <a href="https://github.com/HAMZA-IDHMAD/SRDT" target="_blank" data-translate="viewProject">View Project</a>
                   </div>
               </div>
           </div>
+          <br>
+          <div class="portfolio">
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="assets/images/drms.png" alt="DRMS Project">
+                <h3 data-translate="project4Title">DRMS Dashboard</h3>
+                <div class="overlay">
+                    <p data-translate="project4Desc">DRMS tableau de bord (still on going)</p>
+                    <a href="https://github.com/HAMZA-IDHMAD/DRMS" target="_blank" data-translate="viewProject">View Project</a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="assets/images/python-logo-4k-i6.jpg" alt="Job Scraping Project">
+                <h3 data-translate="project5Title">Job Scraping</h3>
+                <div class="overlay">
+                    <p data-translate="project5Desc">Web scraping jobs using selenium and pandas from indeed.com</p>
+                    <a href="https://github.com/HAMZA-IDHMAD/Job-scraping" target="_blank" data-translate="viewProject">View Project</a>
+                </div>
+            </div>
+        </div>
        </section>
 
        <!-- -------------- CONTACT BOX ---------------- -->
@@ -254,6 +270,8 @@
     <!-- ----- MAIN JS ----- -->
     <script src="assets/js/main.js"></script>
 
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </html>

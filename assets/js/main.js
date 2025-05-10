@@ -117,11 +117,19 @@ window.addEventListener('scroll', scrollActive)
 document.getElementById("contactForm").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent the default form submission
 
+  // Get the submit button
+  const submitButton = this.querySelector('button[type="submit"]');
+  const originalButtonText = submitButton.innerHTML;
+  
+  // Show loading state
+  submitButton.innerHTML = '<i class="uil uil-spinner-alt"></i> Sending...';
+  submitButton.disabled = true;
+
   emailjs.init("sXGbFgspniN330TZw"); // Replace with your actual EmailJS User ID
   // Collect form data
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
-  const message ="The Email is :"+email+"        The content is : "+ document.getElementById("message").value;
+  const message = "The Email is :" + email + "        The content is : " + document.getElementById("message").value;
 
   // Send the email
   emailjs.send("service_xfr771gg", "template_uqs7l4o", {
@@ -130,10 +138,35 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     message: message
   })
   .then(function(response) {
-    alert("Email sent successfully!");
+    // Reset button state
+    submitButton.innerHTML = originalButtonText;
+    submitButton.disabled = false;
+    
+    // Show success message with SweetAlert
+    Swal.fire({
+      icon: 'success',
+      title: 'Success!',
+      text: 'Your message has been sent successfully!',
+      confirmButtonColor: '#3085d6'
+    });
+    
+    // Clear form
+    document.getElementById("contactForm").reset();
+    
     console.log("Success:", response.status, response.text);
   }, function(error) {
-    alert("Failed to send email.");
+    // Reset button state
+    submitButton.innerHTML = originalButtonText;
+    submitButton.disabled = false;
+    
+    // Show error message with SweetAlert
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong! Please try again.',
+      confirmButtonColor: '#3085d6'
+    });
+    
     console.error("Error:", error);
   });
 });
@@ -155,6 +188,17 @@ const translations = {
     send:"Send ",
     contactDesc:"Do you have a project in your mind, contact me here.",
     aboutText: "I am well-versed in HTML, CSS, PHP, Python and JavaScript, and other cutting edge frameworks and libraries, which allows me to implement interactive features. Additionally, I have experience working with content management systems (CMS) like WordPress.",
+    project1Title: "FastDelivery",
+    project1Desc: "FastDelivery is a cloud-native microservices application that manages e-commerce deliveries. This system replaces a monolithic architecture with four independent microservices that communicate via REST APIs and share authentication via JWT tokens.",
+    project2Title: "FITMAS Club",
+    project2Desc: "FITMAS club app / club sportif management website",
+    project3Title: "SRDT Finance",
+    project3Desc: "SRDT finance management website",
+    project4Title: "DRMS Dashboard",
+    project4Desc: "DRMS tableau de bord (still on going)",
+    project5Title: "Job Scraping",
+    project5Desc: "Web scraping jobs using selenium and pandas from indeed.com",
+    viewProject: "View Project",
     // Add other translations as needed
   },
   de: {
@@ -174,6 +218,17 @@ const translations = {
     send:"Senden ",
     contactDesc:"Haben Sie ein Projekt im Sinn? Kontaktieren Sie mich hier.",
     aboutText: "Ich bin versiert in HTML, CSS, PHP, Python und JavaScript sowie in anderen modernen Frameworks und Bibliotheken, was es mir ermöglicht, interaktive Funktionen zu implementieren. Zusätzlich habe ich Erfahrung mit Content-Management-Systemen (CMS) wie WordPress.",
+    project1Title: "FastDelivery",
+    project1Desc: "FastDelivery ist eine Cloud-native Microservices-Anwendung zur Verwaltung von E-Commerce-Lieferungen. Dieses System ersetzt eine monolithische Architektur durch vier unabhängige Microservices, die über REST-APIs kommunizieren und die Authentifizierung über JWT-Tokens teilen.",
+    project2Title: "FITMAS Club",
+    project2Desc: "FITMAS Club App / Sportclub-Management-Website",
+    project3Title: "SRDT Finance",
+    project3Desc: "SRDT Finanzmanagement-Website",
+    project4Title: "DRMS Dashboard",
+    project4Desc: "DRMS Dashboard (in Bearbeitung)",
+    project5Title: "Job Scraping",
+    project5Desc: "Web-Scraping von Jobs mit Selenium und Pandas von indeed.com",
+    viewProject: "Projekt ansehen",
     // Add other translations as needed
   }
 };
