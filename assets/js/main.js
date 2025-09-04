@@ -189,7 +189,7 @@ const translations = {
     contactDesc:"Do you have a project in your mind, contact me here.",
     aboutText: "I am well-versed in HTML, CSS, PHP, Python and JavaScript, and other cutting edge frameworks and libraries, which allows me to implement interactive features. Additionally, I have experience working with content management systems (CMS) like WordPress.",
     project1Title: "FastDelivery",
-    project1Desc: "FastDelivery is a cloud-native microservices application that manages e-commerce deliveries. This system replaces a monolithic architecture with four independent microservices that communicate via REST APIs and share authentication via JWT tokens.",
+    project1Desc: "E-commerce delivery microservices with REST APIs and JWT auth.",
     project2Title: "FITMAS Club",
     project2Desc: "FITMAS club app / club sportif management website",
     project3Title: "SRDT Finance",
@@ -198,6 +198,8 @@ const translations = {
     project4Desc: "DRMS tableau de bord (still on going)",
     project5Title: "Job Scraping",
     project5Desc: "Web scraping jobs using selenium and pandas from indeed.com",
+    project6Title: "SwiftSell AI",
+    project6Desc: "SaaS application to automate the ordering process by letting AI handle customer conversations in WhatsApp, Facebook, and Instagram",
     viewProject: "View Project",
     // Add other translations as needed
   },
@@ -219,7 +221,7 @@ const translations = {
     contactDesc:"Haben Sie ein Projekt im Sinn? Kontaktieren Sie mich hier.",
     aboutText: "Ich bin versiert in HTML, CSS, PHP, Python und JavaScript sowie in anderen modernen Frameworks und Bibliotheken, was es mir ermöglicht, interaktive Funktionen zu implementieren. Zusätzlich habe ich Erfahrung mit Content-Management-Systemen (CMS) wie WordPress.",
     project1Title: "FastDelivery",
-    project1Desc: "FastDelivery ist eine Cloud-native Microservices-Anwendung zur Verwaltung von E-Commerce-Lieferungen. Dieses System ersetzt eine monolithische Architektur durch vier unabhängige Microservices, die über REST-APIs kommunizieren und die Authentifizierung über JWT-Tokens teilen.",
+    project1Desc: "E-Commerce-Lieferung Microservices mit REST-APIs und JWT-Auth.",
     project2Title: "FITMAS Club",
     project2Desc: "FITMAS Club App / Sportclub-Management-Website",
     project3Title: "SRDT Finance",
@@ -228,6 +230,8 @@ const translations = {
     project4Desc: "DRMS Dashboard (in Bearbeitung)",
     project5Title: "Job Scraping",
     project5Desc: "Web-Scraping von Jobs mit Selenium und Pandas von indeed.com",
+    project6Title: "SwiftSell AI",
+    project6Desc: "SaaS-Anwendung zur Automatisierung des Bestellprozesses durch KI-gestützte Kundenkommunikation in WhatsApp, Facebook und Instagram",
     viewProject: "Projekt ansehen",
     // Add other translations as needed
   }
@@ -281,4 +285,63 @@ document.getElementById('languageBtn').addEventListener('click', toggleLanguage)
 document.addEventListener('DOMContentLoaded', () => {
   updateLanguage();
   initializeTypingEffect();
+});
+
+/* ----- VIDEO MODAL FUNCTIONALITY ----- */
+function openVideoModal(videoSrc) {
+  const modal = document.getElementById('videoModal');
+  const video = document.getElementById('modalVideo');
+  
+  // Set the video source
+  video.src = videoSrc;
+  
+  // Show the modal
+  modal.style.display = 'block';
+  
+  // Play the video
+  video.play();
+  
+  // Prevent body scroll when modal is open
+  document.body.style.overflow = 'hidden';
+}
+
+function closeVideoModal() {
+  const modal = document.getElementById('videoModal');
+  const video = document.getElementById('modalVideo');
+  
+  // Hide the modal
+  modal.style.display = 'none';
+  
+  // Pause and reset the video
+  video.pause();
+  video.currentTime = 0;
+  video.src = '';
+  
+  // Restore body scroll
+  document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking the X button
+document.addEventListener('DOMContentLoaded', () => {
+  const closeBtn = document.querySelector('.close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeVideoModal);
+  }
+  
+  // Close modal when clicking outside the video
+  const modal = document.getElementById('videoModal');
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeVideoModal();
+      }
+    });
+  }
+  
+  // Close modal when pressing Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeVideoModal();
+    }
+  });
 });

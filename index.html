@@ -66,7 +66,7 @@
                 <p data-translate="intro">Skilled full stack developer with a passion for creating seamless, scalable web applications from front to back.</p>
             </div>
             <div class="featured-text-btn">
-                <small><a class="btn" href="CV professionnel gris simple (1).pdf" download="HamzaIdhmad.pdf"><span  data-translate="downloadCV">Download CV </span><i class="uil uil-file-alt"></i></a></small>
+                <small><a class="btn" href="bewerbung.pdf" download="HamzaIdhmad.pdf"><span  data-translate="downloadCV">Download CV </span><i class="uil uil-file-alt"></i></a></small>
             </div>
             <div class="social_icons">
                 <div class="icon"><a href="https://www.instagram.com/hamzaide6"><i class="uil uil-instagram"></i></a></div>
@@ -109,6 +109,9 @@
                         <span>CSS</span>
                         <span>Bootstrap</span>
                         <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Tailwind</span>
+
                     </div>
                 </div>
                 <div class="skills-box">
@@ -119,6 +122,12 @@
                         <span>PHP</span>
                         <span>Laravel</span>
                         <span>Python</span>
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>JWT</span>
+                        <span>REST APIs</span>
+                        <span>Git</span>
+                        <span>Docker</span>
                     </div>
                 </div>
                 <div class="skills-box">
@@ -142,14 +151,15 @@
                       
           <div class="portfolio">
               <!-- Card 1 -->
+
               <div class="card">
-                  <img src="assets/images/fastDelivery.jpeg" alt="FastDelivery Project">
-                  <h3 data-translate="project1Title">FastDelivery</h3>
-                  <div class="overlay">
-                      <p data-translate="project1Desc">FastDelivery is a cloud-native microservices application that manages e-commerce deliveries. This system replaces a monolithic architecture with four independent microservices that communicate via REST APIs and share authentication via JWT tokens.</p>
-                      <a href="https://github.com/HAMZA-IDHMAD/fast-delivery-with-node-js-express-js-and-mongoDB" target="_blank" data-translate="viewProject">View Project</a>
-                  </div>
-              </div>
+                <img src="assets/images/drms.png" alt="DRMS Project">
+                <h3 data-translate="project4Title">DRMS Dashboard</h3>
+                <div class="overlay">
+                    <p data-translate="project4Desc">DRMS tableau de bord (still on going)</p>
+                    <a href="#" onclick="openVideoModal('assets/videos/DRMS and 5 more pages - Personal - Microsoft​ Edge 2025-09-01 14-48-39.mp4')" data-translate="viewProject">View Project</a>
+                </div>
+            </div>
 
               <!-- Card 2 -->
               <div class="card">
@@ -157,7 +167,7 @@
                   <h3 data-translate="project2Title">FITMAS Club</h3>
                   <div class="overlay">
                       <p data-translate="project2Desc">FITMAS club app / club sportif management website</p>
-                      <a href="https://github.com/Redaaitlahsen/Gym" target="_blank" data-translate="viewProject">View Project</a>
+                      <a href="#" onclick="openVideoModal('assets/videos/Fitmas and 7 more pages - Personal - Microsoft​ Edge 2025-09-01 14-52-31.mp4')" data-translate="viewProject">View Project</a>
                   </div>
               </div>
 
@@ -167,7 +177,7 @@
                   <h3 data-translate="project3Title">SRDT Finance</h3>
                   <div class="overlay">
                       <p data-translate="project3Desc">SRDT finance management website</p>
-                      <a href="https://github.com/HAMZA-IDHMAD/SRDT" target="_blank" data-translate="viewProject">View Project</a>
+                      <a href="#" onclick="openVideoModal('assets/videos/SRDT.mp4')" data-translate="viewProject">View Project</a>
                   </div>
               </div>
           </div>
@@ -175,11 +185,11 @@
           <div class="portfolio">
             <!-- Card 4 -->
             <div class="card">
-                <img src="assets/images/drms.png" alt="DRMS Project">
-                <h3 data-translate="project4Title">DRMS Dashboard</h3>
+                <img src="assets/images/fastDelivery.jpeg" alt="FastDelivery Project">
+                <h3 data-translate="project1Title">FastDelivery</h3>
                 <div class="overlay">
-                    <p data-translate="project4Desc">DRMS tableau de bord (still on going)</p>
-                    <a href="https://github.com/HAMZA-IDHMAD/DRMS" target="_blank" data-translate="viewProject">View Project</a>
+                    <p data-translate="project1Desc">Cloud-native microservices application for e-commerce delivery management with REST APIs and JWT authentication.</p>
+                    <a href="https://github.com/HAMZA-IDHMAD/fast-delivery-with-node-js-express-js-and-mongoDB" target="_blank" data-translate="viewProject">View Project</a>
                 </div>
             </div>
 
@@ -190,6 +200,16 @@
                 <div class="overlay">
                     <p data-translate="project5Desc">Web scraping jobs using selenium and pandas from indeed.com</p>
                     <a href="https://github.com/HAMZA-IDHMAD/Job-scraping" target="_blank" data-translate="viewProject">View Project</a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="assets/images/swiftsell AI.png" alt="SwiftSell AI Project">
+                <h3 data-translate="project6Title">SwiftSell AI</h3>
+                <div class="overlay">
+                    <p data-translate="project6Desc">SaaS application to automate the ordering process by letting AI handle customer conversations in WhatsApp, Facebook, and Instagram</p>
+                    <a href="#" onclick="openVideoModal('assets/videos/swiftsell AI.mkv')" data-translate="viewProject">View Project</a>
                 </div>
             </div>
         </div>
@@ -256,6 +276,18 @@
     </footer>
 
     </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <video id="modalVideo" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
