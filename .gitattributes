@@ -1,0 +1,2 @@
+git lfs untrack "assets/videos/*.mp4"
+git lfs untrack "assets/videos/*.mkv"
